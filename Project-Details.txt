@@ -1,0 +1,5 @@
+Base of Project: Vite
+
+Forms: Formik
+Routes: React Router
+Icons: phosphor-react
