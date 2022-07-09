@@ -5,14 +5,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        bgImage: 'url(src/assets/images/top-img.jpg)',
+        bgImageCompany: 'url(src/assets/images/placas.jpg)',
+
+      },
       backgroundColor: {
         'bg-Company': '#070335',
+
       },
       boxShadow: {
         'box-Card': '0px 2px 5px rgba(35,35,35,0.3)',
       },
       fontFamily: {
-        sans: 'Roboto, sans-serif',
+        PT: 'PT, sans-serif',
       },
       colors: {
         green: {
@@ -22,8 +28,10 @@ module.exports = {
         },
         blue: {
           500: '#81D8F7',
+          login: '#5891ff',
           5: '#050872',
           10: '#070335',
+          checkout: '#1e2148'
         },
         orange: {
           500: '#FBA94C',
@@ -44,6 +52,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 
 }

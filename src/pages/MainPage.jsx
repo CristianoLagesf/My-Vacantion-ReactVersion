@@ -1,54 +1,82 @@
 
-import { Player, Youtube } from "@vime/react"
+
 import CardCitiesList from "../components/cardCities/CardCitiesList"
+import CardHoteisList from "../components/cardHoteis/CardHoteisList"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
+
+
+import '../styles/global.css'
+import CardCompany from "../components/UI/CardCompany"
+import SearchBar from "../components/UI/SearchBar"
+
+const textCompany = [
+    " ",
+    "Satisfaction Guaranteed"
+]
 
 const MainPage = () => {
     return (
         <>
+            {/* Header */}
             <Header />
-            <div className="flex  flex-row justify-center mt-20 mb-[220px]">
-                <h1 className="font-extrabold text-6xl ">
-                    Your vacation starts here
-                </h1>
-            </div>
-            <div className="flex-1">
+            {/* Header */}
+            <div className="grid justify-center bg-white">
+                {/* ========== TOP Text ============ */}
+                <div className="flex  flex-col  mt-[50px] mb-[200px] ">
+                    <h1 className="font-bold text-6xl font-sans text-blue-10 uppercase mb-[10px] text-center">
+                        Your vacation starts here
+                    </h1>
 
-                <div className=" flex justify-center">
-                    <div className="h-full w-full max-w-[800px] max-h-[50vh] aspect-video">
-                        <Player>
-                            <Youtube videoId="BNTs6-pNFRk" />
-                            {/* <DefaultUi /> */}
-                        </Player>
+                </div>
+                {/* ========== TOP Text ============ */}
+                <div className='flex justify-center flex-col relative w-[1000px]'>
+                    <div className="absolute top-[-110px] left-[40px]">
+                        <SearchBar />
+                    </div>
+
+                    <div className='bg-bgImage h-[500px] w-full max-w-[1000px] bg-cover rounded-md '>
                     </div>
                 </div>
+                {/* Company msg */}
+                <div className=" text-gray-200 bg-cover  
+                w-full  h-[270px] mt-[220px]  grid justify-items-center "
+                >
+                    <h2 className="text-4xl font-semibold font-PT text-blue-10 pt-4">
+                        Why Choose My Vacation?
+                    </h2>
+                    <div className="flex  items-center  w-[700px] justify-between h-[150px] pt-[40px]">
+                        <CardCompany className="mr-9" title="Best Offers" body={textCompany[0]} icon='0' />
+                        <CardCompany title="Destinations" body={textCompany[0]} icon='1' />
+                        <CardCompany title="Support 24/7" body={textCompany[0]} icon='2' />
+                    </div>
+                </div>
+
+                {/* ========== Middle Site Company Msg  ============ */}
+                <div className=" mt-[140px] grid justify-items-center">
+                    <h2 className="text-3xl font-semibold text-blue-10">
+                        Looking Something New?
+                    </h2>
+                    <p className="text-lg font-medium text-gray-300 leading-10 italic">
+                        Check out the hottest Destinations
+                    </p>
+                </div>
+                <div className="flex justify-center mt-[40px] mb-[120px] ">
+                    <CardCitiesList />
+                </div>
+                {/* ========== Middle Site Company Msg  ============ */}
+                <div className=" mt-[40px] grid justify-items-center">
+                    <h2 className="text-3xl font-semibold text-gray-800">
+                        Best Hoteis Accordiong our users
+                    </h2>
+                    <p className="text-lg font-medium text-gray-300 leading-10 italic">
+                        Check out our Favorite Cities
+                    </p>
+                </div>
+                <div className="flex justify-center mt-[40px] mb-[220px] ">
+                    <CardHoteisList />
+                </div>
             </div>
-
-            <div className="flex justify-center ">
-                <CardCitiesList />
-            </div>
-            {/* Company msg */}
-            <div className="bg-gradient-to-tr from-orange-900 to-gray-600 text-white
-                w-full  h-[450px] mt-[220px] relative">
-                <img src='/src/assets/images/placas.jpg'
-                    className="w-full h-full  object-cover absolute mix-blend-overlay" />
-
-                <h2 className="text-2xl  antialiased font-semibold flex justify-center pt-8">
-                    Best offers for your next vacation
-                </h2>
-                <p className="flex justify-center w-3/6 m-auto mt-8 text-xl ">
-                    Vacations should be easy that’s why we’re with you every step of the way,
-                    so all you have to worry
-                    is preparer your luggage.
-
-                </p>
-                <p className="flex justify-center w-3/6 m-auto mt-8">
-                    Learn more about our Company policies
-                </p>
-                <button className="flex justify-center">Learn more</button>
-            </div>
-
             <Footer />
         </>
     )

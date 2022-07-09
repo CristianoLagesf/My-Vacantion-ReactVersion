@@ -1,11 +1,18 @@
 
+import { BrowserRouter } from 'react-router-dom'
 import './App.css'
-import MainPage from './pages/MainPage'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { Router } from './Router'
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 function App() {
 
   return (
-    <MainPage />
+    <LocalizationProvider dateAdapter={AdapterMoment}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </LocalizationProvider>
   )
 }
 

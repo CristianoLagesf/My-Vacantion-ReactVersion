@@ -1,12 +1,15 @@
 import { useSelector } from 'react-redux'
-import CardCities from './CardCities'
-import { selectAllCities } from './CardCitiesSlice'
+
+import CardHoteis from './CardHoteis'
+import { selectAllHoteis } from './CardHoteisSlice'
+import "../../styles/global.css";
+
 import { useState } from 'react';
 
 const imagePerRow = 2;
-const CardCitiesList = () => {
+const CardHoteisList = () => {
     const [next, setNext] = useState(imagePerRow);
-    const cities = useSelector(selectAllCities)
+    const hoteis = useSelector(selectAllHoteis)
 
     const handleMoreImage = () => {
         setNext(next + imagePerRow);
@@ -15,16 +18,16 @@ const CardCitiesList = () => {
     return (
         <div>
             <div className="grid grid-cols-2 gap-x-5 gap-y-7 ">
-                {cities?.slice(0, next)?.map((cities, index) => {
+                {hoteis?.slice(0, next)?.map((hoteis, index) => {
                     return (
                         <div key={index} className="px-2.5 md:px-0">
-                            <CardCities cities={cities} />
+                            <CardHoteis hoteis={hoteis} />
                         </div>
                     )
                 })}
             </div>
             <div className="flex justify-center">
-                {next < cities?.length && (
+                {next < hoteis?.length && (
                     <button
                         className=" border-4 border-blue-10 bg-blue-10
                         w-[110px] h-[40px] font-semibold uppercase rounded-md place-self-end  m-[20px]
@@ -40,4 +43,11 @@ const CardCitiesList = () => {
     )
 }
 
-export default CardCitiesList
+export default CardHoteisList
+
+
+
+
+
+
+
