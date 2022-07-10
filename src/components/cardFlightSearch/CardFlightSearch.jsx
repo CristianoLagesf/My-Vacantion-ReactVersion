@@ -1,4 +1,5 @@
 import { BriefcaseMetal } from "phosphor-react"
+import { Link } from "react-router-dom"
 
 
 
@@ -109,12 +110,14 @@ const CardFlightSearch = () => {
                     </div>
                     {/* BT Reserve */}
                     <div className="flex justify-center">
-                        <button className=" border-4 border-blue-10  bg-blue-10  
+
+                        <Link to='/checkout' className=" border-4 border-blue-10  bg-blue-10  
                         w-[130px] h-[40px] font-semibold uppercase rounded-md place-self-end  m-[5px]
                         active:border-blue-50 text-white hover:bg-blue-600 hover:border-blue-600
                         ">
                             Reserve
-                        </button>
+                        </Link>
+
                     </div>
                     {/* BT Reserve */}
                 </div>

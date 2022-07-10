@@ -2,8 +2,7 @@
 
 import CardCitiesList from "../components/cardCities/CardCitiesList"
 import CardHoteisList from "../components/cardHoteis/CardHoteisList"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
+
 
 
 import '../styles/global.css'
@@ -19,7 +18,6 @@ const MainPage = () => {
     return (
         <>
             {/* Header */}
-            <Header />
             {/* Header */}
             <div className="grid justify-center bg-white">
                 {/* ========== TOP Text ============ */}
@@ -77,7 +75,6 @@ const MainPage = () => {
                     <CardHoteisList />
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

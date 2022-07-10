@@ -1,14 +1,12 @@
 import CardFlightSearch from "../components/cardFlightSearch/CardFlightSearch"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import SimpleMap from "../components/UI/GPSMAP"
+import CardPackSearchList from "../components/cardPackSearch/CardPackSearchList"
 import LabeledTwoThumbs from "../components/UI/RangeBar"
 import SearchBarL from "../components/UI/SearchBarL"
 
 const FlightSearch = () => {
     return (
         <>
-            <Header />
+
             <div className="flex justify-center">
                 <SearchBarL />
             </div>
@@ -106,9 +104,9 @@ const FlightSearch = () => {
                         </select>
                     </div>
                     <CardFlightSearch />
+
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

@@ -213,13 +213,13 @@ const SearchBar = () => {
 
                     </div>
                     <div className="flex justify-center mt-[20px]">
-                        <Link to='psearch'>
-                            <button className=" border-4 border-blue-10  bg-blue-10  
-                        w-[210px] h-[60px] font-semibold uppercase rounded-md place-self-end  m-[5px]
+                        <Link to='psearch'
+                            className=" border-4 border-blue-10  bg-blue-10  
+                        w-[210px] h-[60px] font-semibold uppercase rounded-md text-center  m-[5px]
                         active:border-blue-50 text-white 
                         ">
-                                Search
-                            </button></Link>
+                            Search
+                        </Link>
                     </div>
                 </div>
             </div>

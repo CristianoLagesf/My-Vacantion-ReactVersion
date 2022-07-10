@@ -1,5 +1,5 @@
 import { Barbell, Coffee, Dog } from "phosphor-react"
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 
 
 const CardPackSearch = ({ hoteis }) => {
@@ -70,7 +70,7 @@ const CardPackSearch = ({ hoteis }) => {
                     </div>
                     {/* BT Reserve */}
 
-                    <Link to='fsearch' className=" border-4 border-blue-10  bg-blue-10  
+                    <Link to='/fsearch' className=" border-4 border-blue-10  bg-blue-10  
                         w-[110px] h-[60px] font-semibold uppercase rounded-md place-self-end  m-[5px]
                         active:border-blue-50 text-white hover:bg-blue-600 hover:border-blue-600 text-center
                         ">

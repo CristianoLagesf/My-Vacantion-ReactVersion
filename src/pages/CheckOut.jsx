@@ -1,12 +1,11 @@
 import { MONTH, YEAR } from '../assets/Shared/NumberCreditCard'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+
 
 
 const CheckOut = () => {
     return (
         <>
-            <Header />
+
             <div className=" flex items-center justify-center flex-col h-[500px] 
                     text-blue-200 text-lg font-semibold rounded-2xl">
                 <div className="">
@@ -88,7 +87,6 @@ const CheckOut = () => {
                 </div>
 
             </div>
-            <Footer />
         </>
 
     )

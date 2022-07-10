@@ -1,6 +1,5 @@
 import CardPackSearchList from "../components/cardPackSearch/CardPackSearchList"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
+
 import SimpleMap from "../components/UI/GPSMAP"
 import LabeledTwoThumbs from "../components/UI/RangeBar"
 import SearchBarL from "../components/UI/SearchBarL"
@@ -8,7 +7,6 @@ import SearchBarL from "../components/UI/SearchBarL"
 const PackageSearch = () => {
     return (
         <>
-            <Header />
             <div className="flex justify-center">
                 <SearchBarL />
             </div>
@@ -22,7 +20,7 @@ const PackageSearch = () => {
                     <div className="border-t-2 mt-[20px] border-b-2 pb-[20px] 
                         flex flex-col ">
                         <h1 className="mt-5 mb-3 font-semibold font-PT tracking-wider text-base">
-                            Search by Company Name
+                            Search by Hotel Name
                         </h1>
                         <input type="search"
                             className=" placeholder border-b-2 bg-transparent  rounded-md"
@@ -31,23 +29,23 @@ const PackageSearch = () => {
                     <div className="  border-b-2 pb-[20px] 
                         flex flex-col ">
                         <h1 className="mt-5 mb-3 font-semibold font-PT tracking-wider text-base">
-                            Stops
+                            Filter by
                         </h1>
                         <div className="flex flex-col gap-y-2">
                             <label className="italic font-light">
                                 <input type="checkbox" className="mr-3 rounded-md border-2"
                                     id="" name="" value="" />
-                                Direct
+                                Breakfast Included
                             </label>
                             <label className="italic font-light">
                                 <input type="checkbox" className="mr-3 rounded-md border-2"
                                     id="" name="" value="" />
-                                1 Stop
+                                Pet Freindly
                             </label>
                             <label className="italic font-light">
                                 <input type="checkbox" className="mr-3 rounded-md border-2"
                                     id="" name="" value="" />
-                                2+ Stops
+                                Gym
                             </label>
 
                         </div>
@@ -107,14 +105,11 @@ const PackageSearch = () => {
                             <option value='sort'>sort</option>
                             <option value='sort'>sort</option>
                             <option value='sort'>sort</option>
-
                         </select>
                     </div>
                     <CardPackSearchList />
                 </div>
-
             </div>
-            <Footer />
         </>
     )
 }

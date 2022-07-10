@@ -5,11 +5,11 @@ import { Logo } from "./Logo"
 import { useState } from "react";
 import { AirplaneTakeoff, Bed, List, Package } from 'phosphor-react';
 import Login from './login/Login';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 
-const Header = ({ fixed }) => {
+const Header = () => {
 
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
@@ -20,14 +20,14 @@ const Header = ({ fixed }) => {
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between 
                                     lg:w-auto lg:static lg:block lg:justify-start">
-                        <Link to='/'
+                        <NavLink to='/'
                             className="inline-block mr-4 py-2 "
 
                         >
                             <div className=" w-[120px] h-auto flex ">
                                 <Logo />
                             </div>
-                        </Link>
+                        </NavLink>
 
                         <button
                             className=" px-3 py-1 block 
@@ -49,31 +49,31 @@ const Header = ({ fixed }) => {
                     >
                         <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                             <li className={" " + (navbarOpen && "pl-6")}>
-                                <Link to='/'
+                                <NavLink to='/'
                                     className="px-3 py-2 flex items-center font-bold text-2xl   
                                     hover:opacity-75  hover:underline underline-offset-2"
-                                    href="#"
+
                                 >
                                     {navbarOpen ? (<Package size={32} color="#f7f7f7" weight="bold" className='mr-4' />) : ''} Packages
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className={" " + (navbarOpen && "pl-6")}>
-                                <Link to='fsearch'
+                                <NavLink to='psearch'
                                     className="px-3 py-2 flex items-center font-bold text-2xl   
                                     hover:opacity-75  hover:underline underline-offset-2"
 
                                 >
                                     {navbarOpen ? (<AirplaneTakeoff size={32} color="#f7f7f7" weight="bold" className='mr-4' />) : ''} Flights
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className={" " + (navbarOpen && "pl-6")}>
-                                <Link to='psearch'
+                                <NavLink to='fsearch'
                                     className="px-3 py-2 flex items-center font-bold text-2xl   
                                     hover:opacity-75  hover:underline underline-offset-2"
-                                    href="#pablo"
+
                                 >
                                     {navbarOpen ? (<Bed size={32} color="#f7f7f7" weight="bold" className='mr-4' />) : ''} Hoteis
-                                </Link>
+                                </NavLink>
                             </li>
                             <li className={" " + (navbarOpen && "order-first")}  >
                                 <Login />
